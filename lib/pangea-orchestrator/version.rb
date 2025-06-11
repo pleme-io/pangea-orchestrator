@@ -1,3 +1,3 @@
-module Pangea
-  VERSION = %(0.0.54).freeze
+module PangeaOrchestrator
+  VERSION = %(0.0.1).freeze
 end
