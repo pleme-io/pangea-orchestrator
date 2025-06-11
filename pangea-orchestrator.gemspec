@@ -6,7 +6,7 @@ require_relative %(lib/pangea-orchestrator/version)
 
 Gem::Specification.new do |spec|
   spec.name                   = %(pangea)
-  spec.version                = Pangea::VERSION
+  spec.version                = PangeaOrchestrator::VERSION
   spec.authors                = [%(drzthslnt@gmail.com)]
   spec.email                  = [%(drzthslnt@gmail.com)]
   spec.description            = %(control rest apis declaratively with ruby)
@@ -14,8 +14,8 @@ Gem::Specification.new do |spec|
   spec.homepage               = %(https://github.com/drzln/#{spec.name})
   spec.license                = %(MIT)
   spec.require_paths          = [%(lib)]
-  spec.executables            << %(pangea)
-  spec.required_ruby_version  = %(>=3.3.0)
+  spec.executables << %(pangea)
+  spec.required_ruby_version = %(>=3.3.0)
 
   spec.files = `git ls-files -z`.split("\x0").reject do |f|
     f.match(%r{^(test|spec|features)/})
@@ -35,18 +35,6 @@ Gem::Specification.new do |spec|
   end
 
   %w[
-    thor
-    rexml
-    bundler
-    toml-rb
-    tty-box
-    tty-color
-    tty-table
-    tty-option
-    aws-sdk-s3
-    bigdecimal
-    tty-progressbar
-    aws-sdk-dynamodb
     abstract-synthesizer
     terraform-synthesizer
   ].each do |dep|
