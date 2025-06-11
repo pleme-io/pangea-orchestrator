@@ -37,6 +37,7 @@ Gem::Specification.new do |spec|
   %w[
     abstract-synthesizer
     terraform-synthesizer
+    pangea
   ].each do |dep|
     spec.add_dependency dep
   end
