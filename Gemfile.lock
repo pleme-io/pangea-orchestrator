@@ -3,6 +3,7 @@ PATH
   specs:
     pangea (0.0.1)
       abstract-synthesizer
+      pangea
       terraform-synthesizer
 
 GEM
