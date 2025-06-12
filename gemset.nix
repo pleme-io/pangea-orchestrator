@@ -139,7 +139,7 @@
       path = ./.;
       type = "path";
     };
-    version = "0.0.17";
+    version = "0.0.18";
   };
   parallel = {
     groups = ["default" "development"];
