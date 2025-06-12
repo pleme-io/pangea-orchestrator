@@ -2,6 +2,8 @@
 require 'json'
 require 'terraform-synthesizer'
 
+$synthesizer = $synthesizer || TerraformSynthesizer.new
+
 module PangeaOrchestrator
   module Resources
     class EKS
@@ -12,8 +14,10 @@ module PangeaOrchestrator
 
         def cluster(name:, resource_name: nil)
           resource_name = name if resource_name.nil?
-          resource :aws_eks_cluster, resource_name do
-            name name
+          $synthesizer.synthesize do
+            resource :aws_eks_cluster, resource_name do
+              name name
+            end
           end
         end
       end
