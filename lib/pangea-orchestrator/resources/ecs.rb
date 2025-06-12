@@ -1,6 +1,6 @@
 # lib/pangea-orchestrator/resources/ecs.rb
 def ecs(
-  name:,
+  name:
   # role_arn: nil,
   # resource_name: nil,
   # version: '1.31',
