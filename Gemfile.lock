@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    pangea-orchestrator (0.0.14)
+    pangea-orchestrator (0.0.15)
       abstract-synthesizer
       terraform-synthesizer
 
