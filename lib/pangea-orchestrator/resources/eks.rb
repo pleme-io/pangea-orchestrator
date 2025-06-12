@@ -1,6 +1,7 @@
 # lib/pangea-orchestrator/resources/eks.rb
 def eks(
   name:,
+  role_arn: nil,
   resource_name: nil,
   version: '1.31',
   access_config: { authentication_mode: :API },
@@ -14,5 +15,13 @@ def eks(
   resource_name = name if resource_name.nil?
   resource :aws_eks_cluster, resource_name do
     name name
+    role_arn role_arn
+    version version
+    access_config access_config
+    vpc_config vpc_config
+    bootstrap_self_managed_addons bootstrap_self_managed_addons
+    compute_config compute_config
+    kubernetes_network_config kubernetes_network_config
+    storage_config storage_config
   end
 end
