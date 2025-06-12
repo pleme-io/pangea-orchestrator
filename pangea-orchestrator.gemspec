@@ -5,12 +5,12 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require_relative %(lib/pangea-orchestrator/version)
 
 Gem::Specification.new do |spec|
-  spec.name                   = %(pangea)
+  spec.name                   = %(pangea-orchestrator)
   spec.version                = PangeaOrchestrator::VERSION
   spec.authors                = [%(drzthslnt@gmail.com)]
   spec.email                  = [%(drzthslnt@gmail.com)]
-  spec.description            = %(control rest apis declaratively with ruby)
-  spec.summary                = %(control rest apis declaratively with ruby)
+  spec.description            = %(orchestrator resources)
+  spec.summary                = %(orchestrator resources)
   spec.homepage               = %(https://github.com/drzln/#{spec.name})
   spec.license                = %(MIT)
   spec.require_paths          = [%(lib)]
@@ -34,11 +34,7 @@ Gem::Specification.new do |spec|
     spec.add_development_dependency dep
   end
 
-  %w[
-    abstract-synthesizer
-    terraform-synthesizer
-    pangea
-  ].each do |dep|
+  %w[abstract-synthesizer terraform-synthesizer].each do |dep|
     spec.add_dependency dep
   end
   spec.metadata['rubygems_mfa_required'] = 'true'
