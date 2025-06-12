@@ -11,7 +11,7 @@ module PangeaOrchestrator
         end
 
         def symbolize(hash)
-          JSON[JSON[hash, symbolic_names: true]]
+          JSON[JSON[hash, symbolize_name: true]]
         end
 
         def cluster(*_args, **kwargs)
