@@ -7,7 +7,7 @@ module PangeaOrchestrator
     class EKS
       class << self
         def synthesizer
-          @synthesizer || = Terraform::Synthesizer.new
+          @synthesizer ||= Terraform::Synthesizer.new
         end
 
         def symbolize(hash)
