@@ -17,6 +17,9 @@ module PangeaOrchestrator
         kwargs        = symbolize(kwargs)
         resource_name = kwargs[:resource_name]
         name          = kwargs[:name]
+
+        resource_name = name if resource_name.nil?
+
         synthesizer.synthesize do
           resource :aws_eks_cluster, resource_name do
             name name
