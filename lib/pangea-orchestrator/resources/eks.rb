@@ -6,20 +6,14 @@ module PangeaOrchestrator
   module Resources
     class EKS
       class << self
-        def synthesizer
-          @synthesizer ||= TerraformSynthesizer.new
-        end
-
         def symbolize(hash)
           JSON[JSON[hash, symbolize_name: true]]
         end
 
         def cluster(name:, resource_name: nil)
           resource_name = name if resource_name.nil?
-          synthesizer.synthesize do
-            resource :aws_eks_cluster, resource_name do
-              name name
-            end
+          resource :aws_eks_cluster, resource_name do
+            name name
           end
         end
       end
