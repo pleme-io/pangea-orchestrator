@@ -1,26 +1,7 @@
 # lib/pangea-orchestrator/resources/eks.rb
-require 'json'
-require 'terraform-synthesizer'
-
-$synthesizer = $synthesizer || TerraformSynthesizer.new
-
-module PangeaOrchestrator
-  module Resources
-    class EKS
-      class << self
-        def symbolize(hash)
-          JSON[JSON[hash, symbolize_name: true]]
-        end
-
-        def cluster(name:, resource_name: nil)
-          resource_name = name if resource_name.nil?
-          $synthesizer.synthesize do
-            resource :aws_eks_cluster, resource_name do
-              name name
-            end
-          end
-        end
-      end
-    end
+def eks(name:, resource_name: nil)
+  resource_name = name if resource_name.nil?
+  resource :aws_eks_cluster, resource_name do
+    name name
   end
 end
