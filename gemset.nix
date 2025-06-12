@@ -131,7 +131,7 @@
     };
     version = "1.7.0";
   };
-  pangea = {
+  pangea-orchestrator = {
     dependencies = ["abstract-synthesizer" "terraform-synthesizer"];
     groups = ["default"];
     platforms = [];
