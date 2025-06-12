@@ -1,9 +1,8 @@
 PATH
   remote: .
   specs:
-    pangea (0.0.1)
+    pangea-orchestrator (0.0.1)
       abstract-synthesizer
-      pangea
       terraform-synthesizer
 
 GEM
@@ -103,7 +102,7 @@ PLATFORMS
 DEPENDENCIES
   debug
   debug_inspector
-  pangea!
+  pangea-orchestrator!
   rake
   rspec
   rubocop
