@@ -1,14 +1,14 @@
 PATH
   remote: .
   specs:
-    pangea-orchestrator (0.0.10)
+    pangea-orchestrator (0.0.11)
       abstract-synthesizer
       terraform-synthesizer
 
 GEM
   remote: https://rubygems.org/
   specs:
-    abstract-synthesizer (0.0.9)
+    abstract-synthesizer (0.0.12)
     ast (2.4.3)
     date (3.4.1)
     debug (1.10.0)
@@ -89,7 +89,7 @@ GEM
     ruby-progressbar (1.13.0)
     sorbet-runtime (0.5.12167)
     stringio (3.1.7)
-    terraform-synthesizer (0.0.26)
+    terraform-synthesizer (0.0.27)
       abstract-synthesizer
     unicode-display_width (3.1.4)
       unicode-emoji (~> 4.0, >= 4.0.4)
