@@ -4,6 +4,10 @@
   inputs.nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.11";
   inputs.ruby-nix.url = "github:inscapist/ruby-nix";
   inputs.flake-utils.url = "github:numtide/flake-utils";
+  inputs.devenv = {
+    url = "github:cachix/devenv";
+    inputs.nixpkgs.follows = "nixpkgs";
+  };
 
   outputs = {
     nixpkgs,
